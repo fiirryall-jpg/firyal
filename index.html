@@ -1,192 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile</title>
-
-    <style>
-      /* Reset Dasar */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      body {
-        background-color: #fce4ec;
-        padding: 40px 20px;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .title {
-        background-color: #f8bbd0;
-        padding: 20px;
-        border-radius: 12px;
-        text-align: center;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      }
-
-      p b i {
-        display: block;
-        text-align: center;
-        margin-bottom: 15px;
-        color: #ad1457;
-      }
-
-      .btn-group {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #5f5454;
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
-      }
-
-      .btn.message {
-        background-color: #636e72;
-        color: white;
-        border: none;
-        padding: 10px 30px;
-        border-radius: 25px;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-
-      .btn.message:hover {
-        background-color: #2d3436;
-        transform: translateY(-2px);
-      }
-
-      .card {
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        border-top: 6px solid #2c3e50;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      }
-
-      .card h3 {
-        margin-bottom: 15px;
-        color: #2c3e50;
-        border-bottom: 2px solid #f8bbd0;
-        display: inline-block;
-      }
-
-      .bio p,
-      .social p {
-        margin-bottom: 8px;
-      }
-
-      .bio b,
-      .social b {
-        color: #ad1457;
-        display: inline-block;
-        width: 100px;
-      }
-
-      .about {
-        border-top-color: #ff80ab;
-        text-align: justify;
-      }
-
-      .about p b i {
-        color: #e91e63;
-        display: inline;
-      }
-
-      .bio-wrapper {
-        display: flex;
         align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .profile-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #f8bbd0;
-      }
-
-      .bio-text {
-        flex: 1;
-      }
-
-      @media (max-width: 600px) {
-        body {
-          padding: 15px;
-        }
-
-        .bio-wrapper {
-          flex-direction: column;
-          text-align: center;
-        }
-      }
+        height: 100vh;
+    }
+    .calculator {
+        background-color: #ffc0c0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4964fd;
+        color: white;
+        cursor: pointer;
+    }
+    .clear {
+        background-color: #a62626;
+        color: white;
+    }
+    .special {
+        background-color: #373a46;
+        color: white;
+    }
+    input[type="text"] {
+        width: 220px;
+        height: 40px;
+        margin-bottom: 10px;
+        text-align: right;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">MY PROFILE</h1>
 
-      <p>
-        <b><i>ayo berteman! klik tanda abu abu di bawah ini yaaa💞</i></b>
-      </p>
-
-      <div class="btn-group">
-        <button class="btn message">message</button>
-      </div>
-
-      <div class="card bio">
-        <h3>BIODATA</h3>
-
-        <div class="bio-wrapper">
-          <img src="WhatsApp Image 2026-04-28 at 11.16.11 AM.jpeg" alt="foto profile" class="profile-img" />
-
-          <div class="bio-text">
-            <p><b>Full Name:</b> firyal najla a.p</p>
-            <p><b>Email:</b> fnajla409@gmail.com</p>
-            <p><b>Phone:</b> 0895406905614</p>
-            <p><b>Address:</b> Depok</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card social">
-        <h3>Social Media</h3>
-        <p>Website: fnaasite.com</p>
-        <p>Instagram: @fiirryall</p>
-      </div>
-
-      <div class="card about">
-        <h3>ABOUT ME</h3>
-        <p>
-          Hai semua, aku firyal. anak pertama dari tiga bersaudara, umurku tahun ini menuju ke 17 tahun. akuu sukaa sekali pemandangan taman, apalagi taman yang dipenuhi bunga! bunga tulip pink adalah bunga kesukaanku.
-          <b><i> aku ini adalah senja yang hangat dan tenang di atas keindahan pantai, terkadang aku juga seperti mendung yang akan turun hujan tanpa petir. </i></b>
-          aku tidak bisa marah dan melampiaskannya pada siapapun, tapi tetap berusaha tersenyum kepada orang lain. terimakasih!!
-        </p>
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.querySelector('.message');
-
-        if (btn) {
-          btn.addEventListener('click', function () {
-            alert('Hai! Makasih sudah mau berteman 😊💞');
-          });
-        }
-      });
+<body>
+    <div class="calculator">
+        <button onclick="clearlayar()" class="clear">C</button>
+        <button class="special" onclick="backspace()">⌫</button>
+        <input type="text" id="layar" disabled>
+        <br>
+        <button onclick="tambahangka('7')">7</button>
+        <button onclick="tambahangka('8')">8</button>       
+        <button onclick="tambahangka('9')">9</button>
+        <button onclick="tambahangka('/')">/</button>
+        <br>
+        <button onclick="tambahangka('4')">4</button>   
+        <button onclick="tambahangka('5')">5</button>
+        <button onclick="tambahangka('6')">6</button>
+        <button onclick="tambahangka('*')">*</button>
+        <br>
+        <button onclick="tambahangka('1')">1</button>
+        <button onclick="tambahangka('2')">2</button>
+        <button onclick="tambahangka('3')">3</button>
+        <button onclick="tambahangka('-') "->-</button>
+        <br>
+        <button onclick="tambahangka('0')">0</button>
+        <button onclick="tambahangka('.')">.</button>
+        <button onclick="hitung()">=</button>
+        <button onclick="tambahangka('+')">+</button>
+        <br>
+        
+        <script>
+            function tambahangka(angka) {
+                document.getElementById('layar').value += angka;
+            }
+            function clearlayar() {
+                document.getElementById('layar').value = '';
+            }
+            function hitung() {
+                var expression = document.getElementById('layar').value;
+                var result = eval(expression);
+                document.getElementById('layar').value = result;
+            }
+            function backspace() {
+                var layar = document.getElementById('layar');
+                layar.value = layar.value.slice(0, -1);
+            }
     </script>
-  </body>
+</body>
 </html>
